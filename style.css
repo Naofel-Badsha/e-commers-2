@@ -553,6 +553,45 @@ header .fav-form .box .content .quantity {
 
 
 
+/*-----------Catagori----------Section---------Start-----------*/
+.category .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.category .box-container .box{
+    height: 30rem;
+    flex: 1 1 40rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.category .box-container .box img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.category .box-container .box:hover img{
+   transform: scale(1.1);
+}
+
+.category .box-container .content{
+    position: absolute;
+    bottom: 9rem;
+    left: 2rem;
+}
+
+.category .box-container .content span{
+    font-size: 2.5rem;
+    color: var(--white-color);
+}
+/*-----------Catagori----------Section---------End-----------*/
+
+
+
 
 
 
