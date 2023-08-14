@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    background: var(--croom);
+    color: #fff;
+}
+
+.btn {
+    background: var(--croom);
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    margin-top: 1rem;
+    color: #20b2aa;
+    background-color: gainsboro;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to right, #61045f, #aa076b);
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+section {
+    padding: 1rem 9%;
+}
+
+.heading {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--black);
+    font-size: 3.5rem;
+    padding-bottom: 3rem;
+    padding: 2rem 0;
+    margin-bottom: 20px;
+}
+
+.heading span {
+    background: #43a0ac;
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0%, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+/*-----------Header----------Section---------Start-----------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem #093153;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.header .logo {
+    font-size: 40px;
+    background: -webkit-linear-gradient(#ff1493, #0df5ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .navbar a {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #11b8b8;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+    color: #ff1493;
+}
+
+.header .btn {
+    margin-top: 0;
+}
+
+header .icon i {
+    cursor: pointer;
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-left: .4rem;
+    border-radius: 50%;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--black);
+    background: gainsboro;
+    color: #43a0ac;
+}
+
+header .icon i:nth-child(1):hover,
+header .icon i:nth-child(2):hover,
+header .icon i:nth-child(3):hover,
+header .icon i:nth-child(4):hover {
+    background: #43a0ac;
+    color: #fff;
+    transform: rotate(360deg);
+    border-radius: 0;
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    color: #43a0ac;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*----------Search--------Form-----------*/
+header .search-form {
+    position: absolute;
+    top: 120%;
+    right: -120%;
+    width: 50rem;
+    height: 5rem;
+    background: #e2dcdc;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+header .search-form.active {
+    right: 2rem;
+    transform: 0.3s;
+}
+
+header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+header .search-form label:hover {
+    color: var(--orange);
+}
+
+/*----------Search--------Form-----------*/
+
+
+
+
+
+/*--------Shopping---------Cart----------*/
+header .shopping-cart {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    background: #f9f2f2;
+    border-radius: .5rem;
+}
+
+header .shopping-cart.active {
+    right: 2rem;
+    transition: 0.3s;
+}
+
+header .shopping-cart .box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+header .shopping-cart .box img {
+    height: 10rem;
+}
+
+header .shopping-cart .box .fa-trash {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    right: 2rem;
+    transform: translateY(-50%);
+}
+
+header .shopping-cart .box .fa-trash:hover {
+    color: var(--orange);
+}
+
+header .shopping-cart .box .content {
+    color: var(--box-shadow);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+header .shopping-cart .box .content span {
+    color: var(--orange);
+    font-size: 1.5rem;
+    margin-top: 3px;
+    font-weight: 600;
+}
+
+header .shopping-cart .box .content .quantity {
+    padding-left: 1rem;
+    color: crimson;
+}
+
+header .shopping-cart .total {
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+header .shopping-cart .btn {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+/*--------Shopping---------Cart----------*/
+
+
+
+
+/*-------Favoriet------Form--------*/
+header .fav-form {
+    position: absolute;
+    top: 120%;
+    right: -110%;
+    width: 28rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    background: #f9f2f2;
+    border-radius: .5rem;
+}
+
+header .fav-form.active {
+    right: 2rem;
+    transition: 0.3;
+}
+
+header .fav-form .head {
+    color: var(--orange);
+    font-size: 2.5rem;
+    border-bottom: 2px solid lime;
+    padding: 1rem 0;
+}
+
+header .fav-form .box {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+header .fav-form .box img {
+    height: 7rem;
+}
+
+header .fav-form .box .fa-trash {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    right: 2rem;
+    transform: translateY(-50%);
+}
+
+header .fav-form .box .fa-trash:hover {
+    color: var(--orange);
+}
+
+header .fav-form .box .content {
+    color: var(--box-shadow);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+header .fav-form .box .content span {
+    color: var(--orange);
+    font-size: 1.5rem;
+    margin-top: 3px;
+    font-weight: 600;
+}
+
+header .fav-form .box .content .quantity {
+    padding-left: 1rem;
+    color: crimson;
+}
+
+/*-------Favoriet------Form--------*/
+
+
+
+
+/*-----------Login-----------From------------*/
+.login-form-container {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10000;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-container.active {
+    left: 0;
+}
+
+.login-form-container form {
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    color: var(--orange);
+    width: 50rem;
+}
+
+.login-form-container form h3 {
+    font-size: 3rem;
+    font-family: sans-serif;
+    color: #444;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.login-form-container form .box {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #11b8b8;
+    margin: .6rem 0;
+    border: .2rem solid #11b8b8;
+    border-radius: .5rem;
+}
+
+
+.login-form-container form .box:focus {
+    box-shadow: 0px 0px 3px 3px #11b8b8;
+}
+
+.login-form-container form #remember {
+    margin: 2rem 0;
+}
+
+.login-form-container form label {
+    font-size: 1.5rem;
+    color: #11b8b8;
+    margin: 5px;
+}
+
+.login-form-container form .btn {
+    display: block;
+    width: 100%;
+}
+
+.login-form-container form p {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    color: #444;
+}
+
+.login-form-container form p a {
+    text-decoration: none;
+    color: #11b8b8;
+}
+
+.login-form-container form p a:hover {
+    text-decoration: underline;
+    color: #ff004f;
+    letter-spacing: 1px;
+}
+
+.login-form-container #from-close {
+    position: absolute;
+    top: 2rem;
+    font-size: 3rem;
+    right: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-form-container form input::placeholder {
+    color: #ca448b;
+    font-style: italic;
+}
+
+.login-form-container form input {
+    color: #11b8b8;
+}
+/*-----------Login-----------From------------*/
+/*-----------Header----------Section---------End-----------*/
+
+
+
+
+/*-----------Home----------Section---------Start-----------*/
+.Home{
+    background-image: url(Images/Home-3\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.home-description{
+ padding-top: 250px;
+ text-align: center;
+}
+
+.home-description h1{
+    font-size: 60px;
+    background: -webkit-linear-gradient(#ff1493, #0df5ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #20b2aa;
+}
+
+.home-description h3{
+    font-size: 40px;
+    background: -webkit-linear-gradient(#ff1493, #0df5ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #20b2aa;
+}
+
+.home-button{
+    margin-top: 20px;
+    padding: 12px 18px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #7b3aca,#43a0ac);
+    border-radius: 5px;
+}
+
+.home-button:hover{
+    background-image: linear-gradient(to right, #43a0ac,#7b3aca); 
+    letter-spacing: 2px;
+}
+/*-----------Home----------Section---------Start-----------*/
+
+
+
+
+
+
+
+
+
+/*----------Media-----------Responsive----------Start---------*/
+/*----------Header------Responsive-------Start---------*/
+@media screen and (max-width: 1100px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        height: 200px;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header #loginBtn i {
+        display: block;
+    }
+
+    .header #loginBtn .btn {
+        display: none;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    .fa-times {
+        transform: rotate(360deg);
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        background: #a8bbdd;
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2.5rem;
+        font-size: 2rem;
+        background: #1a5757;
+        color: #ffff;
+        padding: .8rem;
+        text-align: center;
+        border-radius: .5rem;
+    }
+
+    .header .navbar a:hover {
+        background: #fff;
+        color: #1a5757;
+    }
+
+    .home-description h1 {
+        font-size: 50px;
+    }
+
+    .home-description h3 {
+        font-size: 30px;
+    }
+
+    .footer .box-container .box {
+        text-align: center;
+    }
+
+    /*----------Header------Responsive-------End---------*/
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
