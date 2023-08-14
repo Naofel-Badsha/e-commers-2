@@ -487,6 +487,72 @@ header .fav-form .box .content .quantity {
 
 
 
+/*---------Icons------------Container---------End--------*/
+.iconsContainer{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: #d1b7b7;
+}
+
+.iconsContainer .icons{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 1.8rem;
+    padding: 2.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.iconsContainer .icons:hover{
+    background: #363535;
+    box-shadow: 0px 0px 3px 3px #20b2aa;
+}
+
+.iconsContainer .icons i{
+    background: #43a0ac;
+    color: #fff;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.iconsContainer .icons span{
+    font-size: 3.7rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#ff1493, #0df5ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 30px;
+}
+
+.iconsContainer .content .number{
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#ff1493, #0df5ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.iconsContainer .icons p{
+    font-size: 2.3rem;
+    font-weight: 500;
+    background: -webkit-linear-gradient(#ff1493, #0df5ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/*---------Icons------------Container---------End--------*/
+
+
+
 
 
 
