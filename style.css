@@ -694,6 +694,69 @@ header .fav-form .box .content .quantity {
 
 
 
+/*-------------Gallary----------Section---------Start-------------*/
+.Gallary content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--header-height);
+}
+
+.gallary-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.8rem;
+}
+
+.gallary-box .box{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 2.8rem;
+    /* clip-path: polygon(50% 0%, 100% 0, 100% 90%, 0 100%, 0 0); */
+    border: 1px solid #11b8b8;
+}
+
+.gallary-box .box img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   animation: float 3s linear infinite;
+   --webkit-animation: float 3s linear infinite;  
+}
+
+
+.gallary-box .box .info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 71, 01, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.gallary-box .box .info:hover{
+    opacity: 1;
+}
+
+.gallary-box .box .info h3{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+/*-------------Gallary----------Section---------End-------------*/
+
+
+
+
+
+
 
 
 
